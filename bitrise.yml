@@ -31,10 +31,12 @@ workflows:
     steps:
     - script@1:
         inputs:
+        - runner_bin: /usr/bin/swift
         - content: >-
             #!/usr/bin/swift
 
             import Foundation
+
 
             let authorisationToken =
             ProcessInfo.processInfo.environment["BITRISE_API_TOKEN"]
